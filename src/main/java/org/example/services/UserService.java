@@ -7,11 +7,7 @@ import org.example.models.User;
 import java.util.List;
 
 public class UserService {
-    private final IUserDao userDao;
-
-    public UserService(){
-        this.userDao = new UserDao();
-    }
+    private final IUserDao userDao = new UserDao();
 
     public List<User> find() {return userDao.find();}
 
